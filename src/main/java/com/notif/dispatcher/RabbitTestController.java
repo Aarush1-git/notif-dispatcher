@@ -6,10 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 public class RabbitTestController {
 
-    // Declares a queue called "test-queue" on startup if it doesn't exist yet.
     @Bean
     public Queue testQueue() {
         return new Queue("test-queue", true);
@@ -23,7 +24,8 @@ public class RabbitTestController {
 
     @GetMapping("/rabbit-test")
     public String rabbitTest() {
-        rabbitTemplate.convertAndSend("test-queue", "hello from spring boot");
-        return "message sent to test-queue";
+        NotificationMessage msg = new NotificationMessage(UUID.randomUUID().toString(), "test@example.com", 0);
+        rabbitTemplate.convertAndSend("test-queue", msg);
+        return "sent: " + msg;
     }
 }
