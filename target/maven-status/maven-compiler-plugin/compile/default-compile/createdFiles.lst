@@ -1,2 +1,3 @@
 com\notif\dispatcher\NotificationWorker.class
+com\notif\dispatcher\RateLimiter.class
 com\notif\dispatcher\RabbitConfig.class

@@ -4,3 +4,4 @@ C:\Users\Admin\Documents\Projects\notif-dispatcher\src\main\java\com\notif\dispa
 C:\Users\Admin\Documents\Projects\notif-dispatcher\src\main\java\com\notif\dispatcher\NotificationWorker.java
 C:\Users\Admin\Documents\Projects\notif-dispatcher\src\main\java\com\notif\dispatcher\RabbitConfig.java
 C:\Users\Admin\Documents\Projects\notif-dispatcher\src\main\java\com\notif\dispatcher\RabbitTestController.java
+C:\Users\Admin\Documents\Projects\notif-dispatcher\src\main\java\com\notif\dispatcher\RateLimiter.java
